@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="/js/script.js" defer async></script>
+    <title>AQUÍ ENTRENO JAVASCRIPT</title>
+</head>
+<body id="body">
+    <div class="principal" id="principal">
+    <div class="navbar">
+        <ul class="navegador-principal">
+            <li>HOME</li>
+            <li class="proyectos-principal">PROYECTOS</li>
+            <li class="paginas-principal" id="mispaginas">MIS PÁGINAS
+                <ul class="paginas-secundario" id="mispaginassecundario">
+                    <li><a href="https://guillemrima.github.io/guillemrima-portfolio/">guillemrimaPortfolio</a></li>
+                    <li>guillmrimaStudios</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="hero-container" id="hero-container">
+        <div class="decoracion-quotes"><img src="/img/icon/quotes-white.png"></div>
+        <h1>
+            <span class="jumbotron-container-1">AQUÍ ENTRENO</span>
+            <br>
+            <span class="jumbotron-container-2"><span>JAVA</span>SCRIPT</span>
+            <br>
+            <span class="jumbotron-container-3">EN ESTE DOCUMENTO PRACTICO TODO AQUELLO QUE
+                                                VOY APRENDIENDO EN JAVASCRIPT.<br>
+                                                AQUÍ LAS COSAS FALLAN, NO CARGAN O SIMPLEMENTE 
+                                                NO HACEN NADA.<BR>APRENDER LLEVA SU TIEMPO.</span>
+        </h1>
+
+    </div>
+    <div class="selectorColor" id="selectorColor">
+        <div class="selectorIzquierda" id="selectorIzquierda"><img src="/img/icon/icono-derecha.png"></div>
+        <div class="selectorDerecha" id="selectorDerecha"><img src="/img/icon/icono-derecha.png"></div>
+    </div>
+    </div>
+    <div class="proyectos" id="proyectos">
+        <div class="contenedor-formulario">
+            <form class="form-register" id="form-register">
+                <h4>Registro de la Compra</h4>
+                <input class="controls" id="producto" type="text" name="producto" placeholder="Ingresa un producto" autocomplete="off">
+                <input class="controls" id="cantidad" type="number" name="cantidad" placeholder="Ingresa una cantidad" autocomplete="off">
+                <button class="botons" type="submit" value="Añadir a la cesta">Añadir a la cesta</button>
+            </form>
+            <div class="base-datos">
+                <table id="listaCompra"><h4>LISTA DE LA COMPRA</h4>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
