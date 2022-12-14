@@ -28,7 +28,7 @@
 .navbar{
     position: absolute;
     top: 20px;
-    margin-left: 50px;
+    margin-left: 70px;
 }
 .navegador-principal{
     display: flex;
@@ -174,20 +174,15 @@
     width: 100%;
     height: 100vh;
     background: #38445a;
-    display: flex;
-    justify-content: center;
+    display:flex;
 }
-.contenedor-formulario{
-width: 70%;
-display: flex;
-justify-content: center;
-}
+
 .form-register{
     width: 400px;
+    margin: 20px;
     background-color: #24303c;
     background-image: linear-gradient(225deg, #24303c 1%, #26649f 100%);  
     padding: 30px;
-    margin: auto;
     border-radius: 20px;
     font-family: 'Roboto', sans-serif;
     color: white;
@@ -228,7 +223,7 @@ justify-content: center;
     background-color: #24303c;
     background-image: linear-gradient(225deg, #24303c 1%, #26649f 100%);
     padding: 30px;
-    margin: auto;
+    margin: 20px;
     border-radius: 20px;
     font-family: 'Roboto', sans-serif;
     color: white;
@@ -257,4 +252,38 @@ justify-content: center;
         opacity: 1;
     }
     
+}
+.contenedor-calculadora{
+width: 300px;
+height: 440px;
+margin: 20px;
+border: 5px solid rgb(223, 221, 221);
+border-radius: 5px;
+padding: 1px;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+}
+.pantalla-calculadora{
+    width: auto;
+    height: 20%;
+    border: 2px solid rgb(190, 190, 190);
+    border-radius: 2px;
+    background-color: rgb(60, 60, 60);
+}
+.contenedor-calculadora .teclado-calculadora{
+    width: 100%;
+    height: 80%;
+}
+.teclado-calculadora .boton{
+    width: 70px;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    border-radius: 2px;
+    border-color: #fffffe;
+    background-color: rgb(59, 58, 58);
+}
+.boton p{
+    font-size: 3em;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

@@ -14,7 +14,7 @@ let body = document.getElementById("principal");
 function cambiarColorIzquierda(){
     clickCount--;
     if(clickCount < 0){
-        clickCount = colores.length;
+        clickCount = colores.length -1;
     }
     body.style.background = colores[clickCount];
 }
@@ -32,7 +32,8 @@ function cambiarColorDerecha(){
 const formulario = document.getElementById("form-register");
 let arrayProductos = new Array();
 var productCount = 0;
-const inputProducto = document.getElementsByClassName("controls");
+const inputProducto = document.getElementById("producto");
+const inputCantidad = document.getElementById("cantidad");
 function nuevoProductoAñadido(producto,cantidad){
     this.producto = producto;
     this.cantidad = cantidad;
@@ -41,13 +42,19 @@ function nuevoProductoAñadido(producto,cantidad){
 
 const enviarProducto = (event) =>{
     event.preventDefault();
-   
+    if(event.target.producto.value == '' || event.target.cantidad.value == ''){
+        inputProducto.style.borderColor = "red";
+        inputCantidad.style.borderColor = "red";
+    }
+    else{
+        inputProducto.style.borderColor = "#24303c";
+        inputCantidad.style.borderColor = "#24303c";
     productCount++;
     var producto = new nuevoProductoAñadido(event.target.producto.value,event.target.cantidad.value);                                      
     arrayProductos.push(producto);
     formulario.reset();
-    return arrayProductos;
-    return productCount;
+    añadirProducto();
+}
 }
 
 let lista = document.getElementById("listaCompra");
@@ -69,7 +76,6 @@ lista.appendChild(NuevaCasilla);
 };
 
 formulario.addEventListener("submit",enviarProducto);
-formulario.addEventListener("submit",añadirProducto);
 
 
 

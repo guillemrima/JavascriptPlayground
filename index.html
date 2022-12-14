@@ -37,6 +37,7 @@
         </h1>
 
     </div>
+    
     <div class="selectorColor" id="selectorColor">
         <div class="selectorIzquierda" id="selectorIzquierda"><img src="/img/icon/icono-derecha.png"></div>
         <div class="selectorDerecha" id="selectorDerecha"><img src="/img/icon/icono-derecha.png"></div>
@@ -45,19 +46,54 @@
     <div class="proyectos" id="proyectos">
         <div class="contenedor-formulario">
             <form class="form-register" id="form-register">
-                <h4>Registro de la Compra</h4>
+                <h4>Registro de Productos</h4>
                 <input class="controls" id="producto" type="text" name="producto" placeholder="Ingresa un producto" autocomplete="off">
                 <input class="controls" id="cantidad" type="number" name="cantidad" placeholder="Ingresa una cantidad" autocomplete="off">
                 <button class="botons" type="submit" value="Añadir a la cesta">Añadir a la cesta</button>
             </form>
             <div class="base-datos">
-                <table id="listaCompra"><h4>LISTA DE LA COMPRA</h4>
+                <table id="listaCompra"><h4>LISTA DE PRODUCTOS</h4>
                     <tr>
                         <th>Producto</th>
                         <th>Cantidad</th>
                     </tr>
                 </table>
             </div>
+        </div>
+        <div class="contenedor-calculadora">
+            <div class="pantalla-calculadora"></div>
+            <table class="teclado-calculadora">
+                <tr>
+                    <th><button class="boton" type="button" id="boton(" name="boton("><p>(</p></button></th>
+                    <th><button class="boton" type="button" id="boton)" name="boton)"><p>)</p></button></th>
+                    <th><button class="boton" type="button" id="boton%" name="boton%"><p>%</p></button></th>
+                    <th><button class="boton" type="button" id="botonAC" name="botonAC"><p>AC</p></button></th>
+                </tr>
+                <tr>
+                    <th><button class="boton" type="button" id="boton7" name="boton7"><p>7</p></button></th>
+                    <th><button class="boton" type="button" id="boton8" name="boton8"><p>8</p></button></th>
+                    <th><button class="boton" type="button" id="boton9" name="boton9"><p>9</p></button></th>
+                    <th><button class="boton" type="button" id="boton÷" name="boton÷"><p>÷</p></button></th>
+                </tr>
+                <tr>
+                    <th><button class="boton" type="button" id="boton4" name="boton4"><p>4</p></button></th>
+                    <th><button class="boton" type="button" id="boton5" name="boton5"><p>5</p></button></th>
+                    <th><button class="boton" type="button" id="boton6" name="boton6"><p>6</p></button></th>
+                    <th><button class="boton" type="button" id="botonX" name="botonx"><p>x</p></button></th>
+                </tr>
+                <tr>
+                    <th><button class="boton" type="button" id="boton1" name="boton1"><p>1</p></button></th>
+                    <th><button class="boton" type="button" id="boton2" name="boton2"><p>2</p></button></th>
+                    <th><button class="boton" type="button" id="boton3" name="boton3"><p>3</p></button></th>
+                    <th><button class="boton" type="button" id="boton-" name="boton-"><p>-</p></button></th>
+                </tr>
+                <tr>
+                    <th><button class="boton" type="button" id="boton9" name="boton0"><p>0</p></button></th>
+                    <th><button class="boton" type="button" id="boton." name="boton."><p>.</p></button></th>
+                    <th><button class="boton" type="submit" id="boton=" name="boton="><p>=</p></button></th>
+                    <th><button class="boton" type="button" id="boton+" name="boton+"><p>+</p></button></th>
+                </tr>
+            </table>
         </div>
     </div>
 </body>
