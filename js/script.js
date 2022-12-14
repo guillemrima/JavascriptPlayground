@@ -34,10 +34,12 @@ let arrayProductos = new Array();
 var productCount = 0;
 const inputProducto = document.getElementById("producto");
 const inputCantidad = document.getElementById("cantidad");
-function nuevoProductoAñadido(producto,cantidad){
-    this.producto = producto;
-    this.cantidad = cantidad;
+class nuevoProductoAñadido {
+    constructor(producto, cantidad) {
+        this.producto = producto;
+        this.cantidad = cantidad;
 
+    }
 }
 
 const enviarProducto = (event) =>{
@@ -74,9 +76,63 @@ NuevaCasilla.appendChild(CasillaProducto);
 NuevaCasilla.appendChild(CasillaCantidad);
 lista.appendChild(NuevaCasilla);
 };
-
 formulario.addEventListener("submit",enviarProducto);
 
 
 
+
+//PROYECTO DE CALCULADORA
+
+const boton0 = document.getElementById("boton0");
+const boton1 = document.getElementById("boton1");
+const boton2 = document.getElementById("boton2");
+const boton3 = document.getElementById("boton3");
+const boton4 = document.getElementById("boton4");
+const boton5 = document.getElementById("boton5");
+const boton6 = document.getElementById("boton6");
+const boton7 = document.getElementById("boton7");
+const boton8 = document.getElementById("boton8");
+const boton9 = document.getElementById("boton9");
+const botonSumar = document.getElementById("boton+");
+const botonRestar = document.getElementById("boton-");
+const botonMultiplicar = document.getElementById("botonX");
+const botonDividir = document.getElementById("boton÷");
+const botonPorcentaje = document.getElementById("boton%");
+const botonPunto = document.getElementById("boton.");
+const botonRestart = document.getElementById("botonAC");
+const BotonAbrirParentesis = document.getElementById("boton(");
+const botonCerrarParentesis = document.getElementById("boton)");
+const botonResultado = document.getElementById("boton=");
+let pantallaCalculadora = document.getElementById("pantallaCalculadora");
+let arrayCalculo = new Array();
+
+const RecopilarVariables = (evento) => {
+   if(evento.target.value == "AC"){arrayCalculo = new Array();}
+   else{
+    arrayCalculo.push(evento.target.value);
+    console.log(arrayCalculo)
+   }
+}
+
+
+boton0.addEventListener("click",RecopilarVariables);
+boton1.addEventListener("click",RecopilarVariables);
+boton2.addEventListener("click",RecopilarVariables);
+boton3.addEventListener("click",RecopilarVariables);
+boton4.addEventListener("click",RecopilarVariables);
+boton5.addEventListener("click",RecopilarVariables);
+boton6.addEventListener("click",RecopilarVariables);
+boton7.addEventListener("click",RecopilarVariables);
+boton8.addEventListener("click",RecopilarVariables);
+boton9.addEventListener("click",RecopilarVariables);
+botonSumar.addEventListener("click",RecopilarVariables);
+botonRestar.addEventListener("click",RecopilarVariables);
+botonMultiplicar.addEventListener("click",RecopilarVariables);
+botonDividir.addEventListener("click",RecopilarVariables);
+botonPorcentaje.addEventListener("click",RecopilarVariables);
+botonPunto.addEventListener("click",RecopilarVariables);
+botonRestart.addEventListener("click",RecopilarVariables);
+BotonAbrirParentesis.addEventListener("click",RecopilarVariables);
+botonCerrarParentesis.addEventListener("click",RecopilarVariables);
+botonResultado.addEventListener("click",RecopilarVariables);
 
