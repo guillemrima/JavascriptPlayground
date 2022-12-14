@@ -1,6 +1,4 @@
-//EFECTO CAMBIO DE COLOR DE FONDO
-//DECLARAMOS LAS VARIABLES Y SUS EVENT LISTENERS NECESARIOS PARA LA FUNCIÓN:
-
+//PROYECTO EFECTO CAMBIO DE COLOR DE FONDO
 let colores = ["#00A8DA","#DA006A","#03DA00","#DAB900","#DA00B2","#DA0000"];
 let clickCount = 0;
 
@@ -26,9 +24,7 @@ function cambiarColorDerecha(){
     body.style.background = colores[clickCount];
 }
 
-//CESTA DE LA COMPRA
-//PRIMERO CREAMOS UN EVENT LISTENER PARA EL FORMULARIO
-
+//PROYECTO REGISTRO DE PROYECTOS
 const formulario = document.getElementById("form-register");
 let arrayProductos = new Array();
 var productCount = 0;
@@ -104,16 +100,30 @@ const BotonAbrirParentesis = document.getElementById("boton(");
 const botonCerrarParentesis = document.getElementById("boton)");
 const botonResultado = document.getElementById("boton=");
 let pantallaCalculadora = document.getElementById("pantallaCalculadora");
+let PantallaOperacion = document.getElementById("numeroPantallaCalculadora");
+let PantallaResultado = document.createElement("p");
 let arrayCalculo = new Array();
-
+let contador = 0;
+var operacion ="";
 const RecopilarVariables = (evento) => {
-   if(evento.target.value == "AC"){arrayCalculo = new Array();}
-   else{
+   if(evento.target.value != "AC")
+   {
     arrayCalculo.push(evento.target.value);
-    console.log(arrayCalculo)
+    operacion = arrayCalculo.join("");
+    var operacionPantalla = document.createTextNode(arrayCalculo[contador]); 
+    PantallaOperacion.appendChild(operacionPantalla);
+    contador++
+    }
+   else{
+          //IMPORTANTE FALTA PONER EL VALIDADOR PARA CUANDO EL BOTON AC SE SELCCIONA (BORRAR ARRAY Y NUMEROS DE LA PANTALLA)
    }
-}
 
+}
+const RealizarCalculo = () =>{
+    var resultado = document.createTextNode(eval(operacion));
+    PantallaResultado.appendChild(resultado);
+    pantallaCalculadora.replaceChild(PantallaResultado,PantallaOperacion)
+}
 
 boton0.addEventListener("click",RecopilarVariables);
 boton1.addEventListener("click",RecopilarVariables);
@@ -134,5 +144,5 @@ botonPunto.addEventListener("click",RecopilarVariables);
 botonRestart.addEventListener("click",RecopilarVariables);
 BotonAbrirParentesis.addEventListener("click",RecopilarVariables);
 botonCerrarParentesis.addEventListener("click",RecopilarVariables);
-botonResultado.addEventListener("click",RecopilarVariables);
+botonResultado.addEventListener("click",RealizarCalculo);
 
