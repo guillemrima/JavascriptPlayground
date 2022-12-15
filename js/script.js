@@ -112,6 +112,7 @@ const RecopilarVariables = (evento) => {
         operacion = arrayCalculo.join("");
         var operacionPantalla = document.createTextNode(arrayCalculo[contador]); 
         PantallaOperacion.appendChild(operacionPantalla);
+        console.log(operacion)
         contador++
     }
    else{

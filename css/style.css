@@ -314,6 +314,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    border-radius: 5px;
 }
 .pantallaJugador .objeto{
     width: 90px;
@@ -327,9 +328,12 @@
     height: 30px;
     border: 2px solid rgb(174, 255, 0);
     position: absolute;
-    top: 0;
-    left: 0;
 }
 .pantallaJugador .puntuacionIA{
+    top: 0;
+    left: 0;    
+}
+.pantallaJugador .puntuacionJugador{
     bottom: 0;
+    left: 0
 }
