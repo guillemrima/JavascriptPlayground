@@ -13,7 +13,7 @@
     src: url(/fonts/Morganite/Morganite-BlackItalic.ttf);
 }
 .principal{
-    background: url(/img/background.png);
+    background: url(img/background.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
