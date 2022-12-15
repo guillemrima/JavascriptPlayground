@@ -299,7 +299,7 @@
     width: 300px;
     height: 440px;
     margin: 20px;
-    border: 5px solid rgb(59, 58, 58);;
+    border: 5px solid rgb(40, 40, 40);
     background-color: rgb(184, 184, 184);
     border-radius: 5px;
     box-shadow: 18px 10px 30px 15px rgba(0, 0, 0, 0.307);
@@ -307,34 +307,104 @@
     flex-direction: column;
     justify-content: space-between;
 }
-.contenedor-PiedraPapelTijera .pantallaJugador{
+.contenedor-PiedraPapelTijera .pantalla{
     width: 100%;
     height: 50%;
-    border: 2px solid rgb(195, 255, 0);
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    border-radius: 5px;
 }
-.pantallaJugador .objeto{
-    width: 90px;
-    height: 90px;
-    border: 2px solid rgb(187, 255, 0);
+.pantallaJugador{
+    border-top: 3px solid rgb(40, 40, 40);
+}
+.pantallaIA{
+    border-bottom: 3px solid rgb(40, 40, 40);
+}
+.pantalla .objeto{
+    width: 120px;
+    height: 120px;
     text-align: center;
-
 }
-.pantallaJugador .puntuacion{
+.objeto img{
+    width:100%;
+    height:100%;
+    object-fit: contain;
+}
+.objetoIA{
+    margin-top: 20px;
+}
+.objetoJugador{
+    margin-bottom: 20px;
+}
+.pantalla .puntuacion{
     width: 30px;
     height: 30px;
-    border: 2px solid rgb(174, 255, 0);
+    border: 4px solid rgb(43, 43, 43);
     position: absolute;
+    background-color: #e5e5e5;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.pantallaJugador .puntuacionIA{
-    top: 0;
-    left: 0;    
+.puntuacionIA p{
+    text-align: center;
+    font-size: 1.7em;
+    font-family: heroFont;
+    color: #ef0c2e;
 }
-.pantallaJugador .puntuacionJugador{
-    bottom: 0;
-    left: 0
+.puntuacionJugador p{
+    text-align: center;
+    font-size: 1.7em;
+    font-family: heroFont;
+    color: #0c5bef;
 }
+.pantalla .puntuacionIA{
+    top: 1%;
+    left: 1%;    
+}
+.pantalla .puntuacionJugador{
+    bottom: 1%;
+    left: 1%;
+}
+.pantalla .eleccionJugador{
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    bottom: -10%;
+    display: flex;
+    background-color: #939292;
+}
+.eleccionJugador .eleccion{
+    width: 100%;
+    height: 100%; 
+    border: 4px solid rgb(43, 43, 43);
+}
+.eleccionJugador .piedra{
+    background:url(./../img/PiedraPapelTijera/piedra.png) no-repeat center;
+    background-size: contain;
+    border-right: 2px solid rgb(43, 43, 43);
+}
+.eleccionJugador .papel{
+    background:url(./../img/PiedraPapelTijera/papel.png) no-repeat center;
+    background-size: contain;
+    border-right: 2px solid rgb(43, 43, 43);
+    border-left: 2px solid rgb(43, 43, 43);
+}
+.eleccionJugador .tijeras{
+    background:url(./../img/PiedraPapelTijera/tijeras.png) no-repeat center;
+    background-size: contain;
+    border-left: 2px solid rgb(43, 43, 43);
+}
+.eleccion .botonEleccion{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+.eleccion:hover{
+    background-color: #565656;
+}
+
