@@ -6,11 +6,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @font-face {
     font-family: heroFont;
-    src: url(/fonts//SHRIMP.ttf);
+    src: url(fonts//SHRIMP.ttf);
 }
 @font-face {
     font-family: heroFontItalic;
-    src: url(/fonts/Morganite/Morganite-BlackItalic.ttf);
+    src: url(fonts/Morganite/Morganite-BlackItalic.ttf);
 }
 .principal{
     background: rgb(234, 191, 37);
