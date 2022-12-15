@@ -60,6 +60,7 @@
 .decoracion-quotes{
     width: 100px;
     height: 100px;
+    margin-bottom: 30px;
     animation: deslizamientoAbajo;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
@@ -79,7 +80,7 @@
 }
 .hero-container span{
     display: block;
-    margin-top: -50px;
+    margin-top: -30px;
 }
 .hero-container h1{
     text-align: center;
