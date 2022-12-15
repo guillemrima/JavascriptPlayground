@@ -108,16 +108,16 @@ var operacion ="";
 const RecopilarVariables = (evento) => {
    if(evento.target.value != "AC")
    {
-    arrayCalculo.push(evento.target.value);
-    operacion = arrayCalculo.join("");
-    var operacionPantalla = document.createTextNode(arrayCalculo[contador]); 
-    PantallaOperacion.appendChild(operacionPantalla);
-    contador++
+        arrayCalculo.push(evento.target.value);
+        operacion = arrayCalculo.join("");
+        var operacionPantalla = document.createTextNode(arrayCalculo[contador]); 
+        PantallaOperacion.appendChild(operacionPantalla);
+        contador++
     }
    else{
-          //IMPORTANTE FALTA PONER EL VALIDADOR PARA CUANDO EL BOTON AC SE SELCCIONA (BORRAR ARRAY Y NUMEROS DE LA PANTALLA)
+    //HAY QUE ARREGLAR EL BOTON AC
+    arrayCalculo = new Array();
    }
-
 }
 const RealizarCalculo = () =>{
     var resultado = document.createTextNode(eval(operacion));
