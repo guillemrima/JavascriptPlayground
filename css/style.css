@@ -462,3 +462,31 @@
     font-family:heroFont;
 }
 
+@media  screen and (max-width:400px) {
+    .navbar{display: none;}
+    .hero-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 200px;
+    }
+    .hero-container h1{
+        font-size: 1em;
+    }
+    .proyectos{
+        width: 100%;
+        height: 100%;
+        background: #38445a;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-register{
+        width: 90%;
+    }
+    .base-datos{
+        width: 90%;
+    }
+
+}
