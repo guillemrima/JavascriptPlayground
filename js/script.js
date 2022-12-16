@@ -166,11 +166,10 @@ let numeroAleatorioEleccionIA = Number;
 let eleccionIA = "";
 let puntuacionIA = document.getElementById("puntuacionIA");
 let puntuacionJugador = document.getElementById("puntuacionJugador");
-let puntosIA = document.createTextNode("0");
-let puntosJugador = (document.createTextNode("0"));
-puntuacionIA.appendChild(puntosIA);
-console.log(puntosIA);
-puntuacionJugador.appendChild(puntosJugador);
+let contadorIA = 0;
+let contadorJugador = 0;
+
+
 //DEFINIMOS LA FUNCION PARA ELEGIR LA ELECCION DEL JUGADOR
 const funcionEleccionJugador = (event) =>{
     eleccionJugador = event.target.value;
@@ -187,18 +186,20 @@ const funcionEleccionIA = () =>{
 }
 const funcionResultado = () => {
     if(eleccionJugador == eleccionIA){console.log("¡Empate!"); mensajeEmpate.style.display = "flex"; mensajePerdedor.style.display = "none"; mensajeGanador.style.display = "flex"}
-    else if(eleccionJugador == "tijeras" && eleccionIA == "piedra"){console.log("¡Has perdido!"); mensajePerdedor.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajeGanador.style.display = "none"}
-    else if(eleccionJugador == "tijeras" && eleccionIA == "papel"){console.log("¡Has ganado!"); mensajeGanador.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajePerdedor.style.display = "none"}
-    else if(eleccionIA == "tijeras" && eleccionJugador == "piedra"){console.log("¡Has ganado!"); mensajeGanador.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajePerdedor.style.display = "none"}
-    else if(eleccionIA == "tijeras" && eleccionJugador == "papel"){console.log("¡Has perdido!"); mensajePerdedor.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajeGanador.style.display = "none"}
-    else if(eleccionJugador == "papel" && eleccionIA == "piedra"){console.log("¡Has ganado!"); mensajeGanador.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajePerdedor.style.display = "none"}
-    else if(eleccionJugador == "papel" && eleccionIA == "tijeras"){console.log("¡Has ganado!"); mensajeGanador.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajePerdedor.style.display = "none"}
-    else if(eleccionIA == "papel" && eleccionJugador == "tijeras"){console.log("¡Has ganado!"); mensajeGanador.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajePerdedor.style.display = "none"}
-    else if(eleccionIA == "papel" && eleccionJugador == "piedra"){console.log("¡Has perdido!"); mensajePerdedor.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajeGanador.style.display = "none"}
-    else if(eleccionJugador == "piedra" && eleccionIA == "papel"){console.log("¡Has perdido!"); mensajePerdedor.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajeGanador.style.display = "none"}
-    else if(eleccionJugador == "piedra" && eleccionIA == "tijeras"){console.log("¡Has ganado!"); mensajeGanador.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajePerdedor.style.display = "none"}
-    else if(eleccionIA == "piedra" && eleccionJugador == "papel"){console.log("¡Has ganado!"); mensajeGanador.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajePerdedor.style.display = "none"}
-    else if(eleccionIA == "piedra" && eleccionJugador == "tijeras"){console.log("¡Has perdido!"); mensajePerdedor.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajeGanador.style.display = "none"}
+    else if(eleccionJugador == "tijeras" && eleccionIA == "piedra"){console.log("¡Has perdido!"); contadorIA++; mensajePerdedor.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajeGanador.style.display = "none";}
+    else if(eleccionJugador == "tijeras" && eleccionIA == "papel"){console.log("¡Has ganado!"); contadorJugador++; mensajeGanador.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajePerdedor.style.display = "none";}
+    else if(eleccionIA == "tijeras" && eleccionJugador == "piedra"){console.log("¡Has ganado!"); contadorJugador++; mensajeGanador.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajePerdedor.style.display = "none"}
+    else if(eleccionIA == "tijeras" && eleccionJugador == "papel"){console.log("¡Has perdido!"); contadorIA++; mensajePerdedor.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajeGanador.style.display = "none"}
+    else if(eleccionJugador == "papel" && eleccionIA == "piedra"){console.log("¡Has ganado!"); contadorJugador++; mensajeGanador.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajePerdedor.style.display = "none"}
+    else if(eleccionJugador == "papel" && eleccionIA == "tijeras"){console.log("¡Has ganado!"); contadorJugador++; mensajeGanador.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajePerdedor.style.display = "none"}
+    else if(eleccionIA == "papel" && eleccionJugador == "tijeras"){console.log("¡Has ganado!"); contadorJugador++; mensajeGanador.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajePerdedor.style.display = "none"}
+    else if(eleccionIA == "papel" && eleccionJugador == "piedra"){console.log("¡Has perdido!");  contadorIA++; mensajePerdedor.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajeGanador.style.display = "none"}
+    else if(eleccionJugador == "piedra" && eleccionIA == "papel"){console.log("¡Has perdido!");  contadorIA++; mensajePerdedor.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajeGanador.style.display = "none"}
+    else if(eleccionJugador == "piedra" && eleccionIA == "tijeras"){console.log("¡Has ganado!"); contadorJugador++; mensajeGanador.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajePerdedor.style.display = "none"}
+    else if(eleccionIA == "piedra" && eleccionJugador == "papel"){console.log("¡Has ganado!"); contadorJugador++; mensajeGanador.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajePerdedor.style.display = "none"}
+    else if(eleccionIA == "piedra" && eleccionJugador == "tijeras"){console.log("¡Has perdido!"); contadorIA++; mensajePerdedor.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajeGanador.style.display = "none"}
+    puntuacionIA.textContent = contadorIA;
+    puntuacionJugador.textContent = contadorJugador;
 }
 //DECLARAMOS LOS EVENT LISTENERS
 piedra.addEventListener("click",funcionEleccionJugador);

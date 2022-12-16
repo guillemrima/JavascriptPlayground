@@ -294,6 +294,7 @@
     border-radius: 2px;
     border-color: #fffffe;
     background-color: rgb(59, 58, 58);
+    cursor: pointer;
 }
 .contenedor-PiedraPapelTijera{
     width: 300px;
