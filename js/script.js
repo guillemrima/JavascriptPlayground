@@ -185,6 +185,8 @@ const funcionEleccionIA = () =>{
     funcionResultado();
 }
 const funcionResultado = () => {
+    if(contadorIA > 9 || contadorJugador > 9){contadorIA = 0; contadorJugador = 0}
+
     if(eleccionJugador == eleccionIA){console.log("¡Empate!"); mensajeEmpate.style.display = "flex"; mensajePerdedor.style.display = "none"; mensajeGanador.style.display = "flex"}
     else if(eleccionJugador == "tijeras" && eleccionIA == "piedra"){console.log("¡Has perdido!"); contadorIA++; mensajePerdedor.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajeGanador.style.display = "none";}
     else if(eleccionJugador == "tijeras" && eleccionIA == "papel"){console.log("¡Has ganado!"); contadorJugador++; mensajeGanador.style.display = "flex"; mensajeEmpate.style.display = "none"; mensajePerdedor.style.display = "none";}
