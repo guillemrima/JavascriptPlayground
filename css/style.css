@@ -465,6 +465,7 @@
 @media  screen and (max-width:400px) {
     .navbar{display: none;}
     .hero-container{
+        margin-bottom: 300px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -473,6 +474,9 @@
     }
     .hero-container h1{
         font-size: 1em;
+    }
+    .jumbotron-container-3{
+        font-size: 1.5em;
     }
     .proyectos{
         width: 100%;
